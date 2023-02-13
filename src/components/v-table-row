@@ -1,0 +1,38 @@
+<template>
+    <div class='v-table_row'>
+      <div class="row row-number">{{ row_data.number }}</div>
+      <div class="row row-name">{{ row_data.name }}</div>
+      <div class="row row-surname">{{ row_data.surname }}</div>
+      <div class="row row-curse">{{ row_data.curse }}</div>
+      <div class="row row-group">{{ row_data.group }}</div>
+      <div class="row row-midlle_mark">{{ row_data.midlle_mark }}</div>
+    </div>
+</template>
+<script>
+    export default {
+    name: "v-table_row",
+    props: {
+        row_data: {
+            type: Object,
+            default: () =>{
+                return {}
+            }
+        }
+    },
+    data() {
+    return {}
+    },
+    computed: {}
+}
+</script>
+ <style>
+    .v-table_row{
+    display: flex;
+    justify-content: space-around;
+  }
+  .row{
+    flex-basis: 25%;
+    padding: 8px 16px;
+    text-align: left;
+  }
+ </style>
